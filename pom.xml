@@ -3,18 +3,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>edu.bu.cs665</groupId>
-	<artifactId>Mathworks-Fraction</artifactId>
+	<groupId>mathworks</groupId>
+	<artifactId>JavaProjectTemplate</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Mathworks-Fraction</name>
+	<name>JavaProjectTemplate</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-
+		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<checkstyle.version>[8.18,)</checkstyle.version>
 		<checkstyle.plugin.version>3.1.0</checkstyle.plugin.version>
@@ -72,7 +72,7 @@
 					<includeProjectDependencies>true</includeProjectDependencies>
 					<includePluginDependencies>true</includePluginDependencies>
 					<killAfter>-1</killAfter>
-					<mainClass>edu.bu.met.cs665.Main</mainClass>
+					<mainClass>mathworks.fraction.Main</mainClass>
 					<cleanupDaemonThreads>false</cleanupDaemonThreads>
 				</configuration>
 			</plugin>

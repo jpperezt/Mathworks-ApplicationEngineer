@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+.classpath
 
 # Log file
 *.log
@@ -22,30 +23,21 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-/target/
 
-.DS_Store
-**/.DS_Store
+# Maven based Java project
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
 
+.idea/
 
-# project setting files 
+.eclipse
 
-.classpath
-.project
 .settings
+.project
 
-
-
-# User-specific stuff:
-.idea/**/workspace.xml
-.idea/**/tasks.xml
-.idea/dictionaries
-
-# Sensitive or high-churn files:
-.idea/**/dataSources/
-.idea/**/dataSources.ids
-.idea/**/dataSources.xml
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
+*.log

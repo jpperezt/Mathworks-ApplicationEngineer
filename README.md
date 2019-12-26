@@ -1,85 +1,36 @@
-# Project Template
+# [](https://github.com/metcs/met-cs665-assignment-2-jpperezt/blob/master/README.md#assignment-2---cs665-boston-university---by-jose-perez-torres)Assignment #2 - CS665 Boston University - By Jose Perez Torres
 
-This is a Java Maven Project Template
+This is a Java Maven Project corresponding to the **Assignment #2** in the CS665 course - Software Dessign and Patterns. This application is the responsible for handling the notiﬁcation system to send notiﬁcations about delivery requests to drivers.
 
+# [](https://github.com/metcs/met-cs665-assignment-1-jpperezt/blob/master/README.md#implementation-description)Implementation Description
 
-# How to compile the project
-
-We use Apache Maven to compile and run this project. 
-
-You need to install Apache Maven (https://maven.apache.org/)  on your system. 
-
-Type on the command line: 
-
-```bash
-mvn clean compile
-```
-
-# How to create a binary runnable package 
+-   This application is based on the **Observer Pattern**.
+    
+    > Observable Package --> Contains the Subject interface (ShopSubject) and the Concrete Subject class (ShopNotificationSystem)   which controls:
+    
+	    > Register  -->  Add a new driver in the consortium
+	    > Remove -->  Remove a driver in the consortium
+	    > Update  --> Notify all the drivers with the delivery request
+    
+    > Observer Package --> Contains the Observer interface (DriverObserver) and the Concrete Observer class (BasicNotification) who is the responsible to update or notify all the drivers presenting the Delivery Request.
 
 
-```bash
-mvn clean compile assembly:single
-```
+   -   It was designed for handling flexibility and reusability, it means that if we want to add certain functionality it will be easy to implement. I used the DisplayDeliveryRequest interface for handling any different way to display the notification., i.e. I will add a new vehicle type in the consortium and it could have a different way to display the notification.
+    
+-   This implementation is **Sufficiency** because is getting the requirements for this assignment.
+    
+    > Controls the notiﬁcation system to send notiﬁcations about delivery requests to drivers. When a store gets a product delivery orders should be created at store and a delivery request should be broadcasted to all drivers.
+
+    
+-   This implementation is **Understandable ** because any other Java Programmer could be read it and understand easily.
+    
+    > Class and Variable Naming reflect the purpose and meaning of its existence, following the Observer Pattern. Coupling was thinking in this design, so, each class can act separately.
+    
+-   This implementation is avoiding duplicated code using polymorphism to get different behaviors with the same code only depending of the vehicle type in the case of the notifications display. 
 
 
-# How to run
+# [](https://github.com/metcs/met-cs665-assignment-2-jpperezt/blob/master/README.md#uml-diagrams)UML diagrams
 
+**Class Diagram** (https://picasaweb.google.com/113574334349572414933/6741031691144590337#6741031689657410706 "Assignment2-UML-jpperezt")
 
-```bash
-java -classpath target/Example-1-1.0-SNAPSHOT-jar-with-dependencies.jar edu.bu.met.cs665.Main
-```
-
-or
-
-
-```bash
-run.sh 
-```
-
-# Using Findbugs 
-
-To see bug detail using the Findbugs GUI, use the following command "mvn findbugs:gui"
-
-Or you can create a XML report by using  
-
-
-```bash
-mvn findbugs:gui 
-```
-
-or 
-
-
-```bash
-mvn findbugs:findbugs
-```
-
-# Run Checkstyle 
-
-CheckStyle code styling configuration files are in config/ directory. Maven checkstyle plugin is set to use google code style. 
-You can change it to other styles like sun checkstyle. 
-
-To analyze this example using CheckStyle run 
-
-```bash
-mvn checkstyle:check
-```
-
-This will generate a report in XML format
-
-
-```bash
-target/checkstyle-checker.xml
-target/checkstyle-result.xml
-```
-
-and the following command will generate a report in HTML format that you can open it using a Web browser. 
-
-```bash
-mvn checkstyle:checkstyle
-```
-
-```bash
-target/site/checkstyle.html
-```
+Also it could be find under the src/uml folder inside the project.
